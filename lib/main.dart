@@ -11,11 +11,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: Colors.white,
+        primaryColor: Colors.teal,
+        appBarTheme: AppBarTheme(
+          color: Colors.transparent,
+          elevation: 0.0,
+          titleTextStyle: TextStyle(
+              color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),
+          centerTitle: false,
+          iconTheme: IconThemeData(color: Colors.black),
+        ),
       ),
       home: BoardScreen(),
     );
   }
 }
-
